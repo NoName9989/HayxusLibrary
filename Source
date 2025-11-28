@@ -1,0 +1,864 @@
+
+
+-- Instances: 103 | Scripts: 0 | Modules: 0 | Tags: 0
+local LMG2L = {};
+
+-- Players.Bawcs177.PlayerGui.ScreenGui
+LMG2L["ScreenGui_1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+LMG2L["ScreenGui_1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main
+LMG2L["Main_2"] = Instance.new("Frame", LMG2L["ScreenGui_1"]);
+LMG2L["Main_2"]["BorderSizePixel"] = 0;
+LMG2L["Main_2"]["BackgroundColor3"] = Color3.fromRGB(62, 62, 62);
+LMG2L["Main_2"]["Size"] = UDim2.new(0.60221, 0, 0.9653, 0);
+LMG2L["Main_2"]["Position"] = UDim2.new(0.19337, 0, -0.09464, 0);
+LMG2L["Main_2"]["Name"] = [[Main]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Navigation
+LMG2L["Navigation_3"] = Instance.new("Frame", LMG2L["Main_2"]);
+LMG2L["Navigation_3"]["BorderSizePixel"] = 0;
+LMG2L["Navigation_3"]["BackgroundColor3"] = Color3.fromRGB(105, 105, 105);
+LMG2L["Navigation_3"]["Size"] = UDim2.new(0.25229, 0, 0.84967, 0);
+LMG2L["Navigation_3"]["Position"] = UDim2.new(0, 0, 0.15033, 0);
+LMG2L["Navigation_3"]["Name"] = [[Navigation]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Navigation.UICorner
+LMG2L["UICorner_4"] = Instance.new("UICorner", LMG2L["Navigation_3"]);
+LMG2L["UICorner_4"]["CornerRadius"] = UDim.new(0, 6);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Navigation.Tabbar
+LMG2L["Tabbar_5"] = Instance.new("ScrollingFrame", LMG2L["Navigation_3"]);
+LMG2L["Tabbar_5"]["ScrollingDirection"] = Enum.ScrollingDirection.Y;
+LMG2L["Tabbar_5"]["SizeConstraint"] = Enum.SizeConstraint.RelativeYY;
+LMG2L["Tabbar_5"]["BorderSizePixel"] = 0;
+LMG2L["Tabbar_5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Tabbar_5"]["Name"] = [[Tabbar]];
+LMG2L["Tabbar_5"]["Size"] = UDim2.new(1, 0, 0.99231, 0);
+LMG2L["Tabbar_5"]["ScrollBarThickness"] = 0;
+LMG2L["Tabbar_5"]["BackgroundTransparency"] = 1;
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Navigation.Tabbar.UIPadding
+LMG2L["UIPadding_6"] = Instance.new("UIPadding", LMG2L["Tabbar_5"]);
+LMG2L["UIPadding_6"]["PaddingTop"] = UDim.new(0, 8);
+LMG2L["UIPadding_6"]["PaddingBottom"] = UDim.new(0, 8);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Navigation.Tabbar.UIListLayout
+LMG2L["UIListLayout_7"] = Instance.new("UIListLayout", LMG2L["Tabbar_5"]);
+LMG2L["UIListLayout_7"]["Padding"] = UDim.new(0, 1);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Navigation.Tabbar.Slected
+LMG2L["Slected_8"] = Instance.new("TextLabel", LMG2L["Tabbar_5"]);
+LMG2L["Slected_8"]["BorderSizePixel"] = 0;
+LMG2L["Slected_8"]["TextSize"] = 14;
+LMG2L["Slected_8"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+LMG2L["Slected_8"]["BackgroundColor3"] = Color3.fromRGB(199, 199, 199);
+LMG2L["Slected_8"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["Slected_8"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Slected_8"]["Size"] = UDim2.new(0, 110, 0, 32);
+LMG2L["Slected_8"]["Text"] = [[Home]];
+LMG2L["Slected_8"]["Name"] = [[Slected]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Navigation.Tabbar.Slected.UIPadding
+LMG2L["UIPadding_9"] = Instance.new("UIPadding", LMG2L["Slected_8"]);
+LMG2L["UIPadding_9"]["PaddingLeft"] = UDim.new(0, 28);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Navigation.Tabbar.Slected.ImageLabel
+LMG2L["ImageLabel_a"] = Instance.new("ImageLabel", LMG2L["Slected_8"]);
+LMG2L["ImageLabel_a"]["BorderSizePixel"] = 0;
+LMG2L["ImageLabel_a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+-- LMG2L["ImageLabel_a"]["ImageContent"] = ;
+LMG2L["ImageLabel_a"]["Image"] = [[rbxassetid://138518566188742]];
+LMG2L["ImageLabel_a"]["Size"] = UDim2.new(0.24545, 0, 0.9375, 0);
+LMG2L["ImageLabel_a"]["BackgroundTransparency"] = 1;
+LMG2L["ImageLabel_a"]["Position"] = UDim2.new(-0.25455, 0, 0.03125, 0);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Navigation.Tabbar.Unactive
+LMG2L["Unactive_b"] = Instance.new("TextLabel", LMG2L["Tabbar_5"]);
+LMG2L["Unactive_b"]["BorderSizePixel"] = 0;
+LMG2L["Unactive_b"]["TextSize"] = 14;
+LMG2L["Unactive_b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+LMG2L["Unactive_b"]["BackgroundColor3"] = Color3.fromRGB(105, 105, 105);
+LMG2L["Unactive_b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["Unactive_b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Unactive_b"]["Size"] = UDim2.new(0, 110, 0, 32);
+LMG2L["Unactive_b"]["Text"] = [[Home]];
+LMG2L["Unactive_b"]["Name"] = [[Unactive]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Navigation.Tabbar.Unactive.UIPadding
+LMG2L["UIPadding_c"] = Instance.new("UIPadding", LMG2L["Unactive_b"]);
+LMG2L["UIPadding_c"]["PaddingLeft"] = UDim.new(0, 28);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Navigation.Tabbar.Unactive.ImageLabel
+LMG2L["ImageLabel_d"] = Instance.new("ImageLabel", LMG2L["Unactive_b"]);
+LMG2L["ImageLabel_d"]["BorderSizePixel"] = 0;
+LMG2L["ImageLabel_d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+-- LMG2L["ImageLabel_d"]["ImageContent"] = ;
+LMG2L["ImageLabel_d"]["Image"] = [[rbxassetid://138518566188742]];
+LMG2L["ImageLabel_d"]["Size"] = UDim2.new(0.24545, 0, 0.9375, 0);
+LMG2L["ImageLabel_d"]["BackgroundTransparency"] = 1;
+LMG2L["ImageLabel_d"]["Position"] = UDim2.new(-0.25455, 0, 0.03125, 0);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Navigation.Hide2
+LMG2L["Hide2_e"] = Instance.new("Frame", LMG2L["Navigation_3"]);
+LMG2L["Hide2_e"]["ZIndex"] = 0;
+LMG2L["Hide2_e"]["BorderSizePixel"] = 0;
+LMG2L["Hide2_e"]["BackgroundColor3"] = Color3.fromRGB(105, 105, 105);
+LMG2L["Hide2_e"]["Size"] = UDim2.new(0.03636, 0, 1, 0);
+LMG2L["Hide2_e"]["Position"] = UDim2.new(0.96364, 0, 0, 0);
+LMG2L["Hide2_e"]["Name"] = [[Hide2]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Navigation.Hide1
+LMG2L["Hide1_f"] = Instance.new("Frame", LMG2L["Navigation_3"]);
+LMG2L["Hide1_f"]["BorderSizePixel"] = 0;
+LMG2L["Hide1_f"]["BackgroundColor3"] = Color3.fromRGB(216, 216, 216);
+LMG2L["Hide1_f"]["Size"] = UDim2.new(0.00909, 0, 1, 0);
+LMG2L["Hide1_f"]["Position"] = UDim2.new(1, 0, 0, 0);
+LMG2L["Hide1_f"]["Name"] = [[Hide1]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.UICorner
+LMG2L["UICorner_10"] = Instance.new("UICorner", LMG2L["Main_2"]);
+LMG2L["UICorner_10"]["CornerRadius"] = UDim.new(0, 6);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.TopBar
+LMG2L["TopBar_11"] = Instance.new("Frame", LMG2L["Main_2"]);
+LMG2L["TopBar_11"]["BackgroundColor3"] = Color3.fromRGB(86, 86, 86);
+LMG2L["TopBar_11"]["Size"] = UDim2.new(1, 0, 0.15686, 0);
+LMG2L["TopBar_11"]["Name"] = [[TopBar]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.TopBar.Close
+LMG2L["Close_12"] = Instance.new("TextButton", LMG2L["TopBar_11"]);
+LMG2L["Close_12"]["BorderSizePixel"] = 0;
+LMG2L["Close_12"]["TextSize"] = 18;
+LMG2L["Close_12"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Close_12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Close_12"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["Close_12"]["BackgroundTransparency"] = 1;
+LMG2L["Close_12"]["Size"] = UDim2.new(0.07339, 0, 0.66667, 0);
+LMG2L["Close_12"]["Text"] = [[X]];
+LMG2L["Close_12"]["Name"] = [[Close]];
+LMG2L["Close_12"]["Position"] = UDim2.new(0.8945, 0, 0.125, 0);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.TopBar.UICorner
+LMG2L["UICorner_13"] = Instance.new("UICorner", LMG2L["TopBar_11"]);
+
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.TopBar.Hayxus Hub
+LMG2L["Hayxus Hub_14"] = Instance.new("TextLabel", LMG2L["TopBar_11"]);
+LMG2L["Hayxus Hub_14"]["TextWrapped"] = true;
+LMG2L["Hayxus Hub_14"]["BorderSizePixel"] = 0;
+LMG2L["Hayxus Hub_14"]["TextSize"] = 24;
+LMG2L["Hayxus Hub_14"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Hayxus Hub_14"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["Hayxus Hub_14"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Hayxus Hub_14"]["BackgroundTransparency"] = 1;
+LMG2L["Hayxus Hub_14"]["Size"] = UDim2.new(0.30734, 0, 1, 0);
+LMG2L["Hayxus Hub_14"]["Text"] = [[Hayxus Hub]];
+LMG2L["Hayxus Hub_14"]["Name"] = [[Hayxus Hub]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.TopBar.Hide2
+LMG2L["Hide2_15"] = Instance.new("Frame", LMG2L["TopBar_11"]);
+LMG2L["Hide2_15"]["BorderSizePixel"] = 0;
+LMG2L["Hide2_15"]["BackgroundColor3"] = Color3.fromRGB(216, 216, 216);
+LMG2L["Hide2_15"]["Size"] = UDim2.new(1, 0, 0.02083, 0);
+LMG2L["Hide2_15"]["Position"] = UDim2.new(0, 0, 0.97917, 0);
+LMG2L["Hide2_15"]["Name"] = [[Hide2]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.TopBar.Hide1
+LMG2L["Hide1_16"] = Instance.new("Frame", LMG2L["TopBar_11"]);
+LMG2L["Hide1_16"]["ZIndex"] = 0;
+LMG2L["Hide1_16"]["BorderSizePixel"] = 0;
+LMG2L["Hide1_16"]["BackgroundColor3"] = Color3.fromRGB(86, 86, 86);
+LMG2L["Hide1_16"]["Size"] = UDim2.new(1, 0, 0.10417, 0);
+LMG2L["Hide1_16"]["Position"] = UDim2.new(0, 0, 0.89583, 0);
+LMG2L["Hide1_16"]["Name"] = [[Hide1]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.TopBar.Minisize
+LMG2L["Minisize_17"] = Instance.new("TextButton", LMG2L["TopBar_11"]);
+LMG2L["Minisize_17"]["BorderSizePixel"] = 0;
+LMG2L["Minisize_17"]["TextSize"] = 18;
+LMG2L["Minisize_17"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Minisize_17"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Minisize_17"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["Minisize_17"]["BackgroundTransparency"] = 1;
+LMG2L["Minisize_17"]["Size"] = UDim2.new(0.07339, 0, 0.66667, 0);
+LMG2L["Minisize_17"]["Text"] = [[▢]];
+LMG2L["Minisize_17"]["Name"] = [[Minisize]];
+LMG2L["Minisize_17"]["Position"] = UDim2.new(0.81422, 0, 0.125, 0);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content
+LMG2L["Content_18"] = Instance.new("Frame", LMG2L["Main_2"]);
+LMG2L["Content_18"]["BorderSizePixel"] = 0;
+LMG2L["Content_18"]["BackgroundColor3"] = Color3.fromRGB(38, 38, 38);
+LMG2L["Content_18"]["AnchorPoint"] = Vector2.new(1, 0);
+LMG2L["Content_18"]["Size"] = UDim2.new(0.72248, 0, 0.81699, 0);
+LMG2L["Content_18"]["Position"] = UDim2.new(0.98624, 0, 0.16993, 0);
+LMG2L["Content_18"]["Name"] = [[Content]];
+LMG2L["Content_18"]["BackgroundTransparency"] = 1;
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame
+LMG2L["ScrollingFrame_19"] = Instance.new("ScrollingFrame", LMG2L["Content_18"]);
+LMG2L["ScrollingFrame_19"]["ZIndex"] = 0;
+LMG2L["ScrollingFrame_19"]["BorderSizePixel"] = 0;
+LMG2L["ScrollingFrame_19"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["ScrollingFrame_19"]["Size"] = UDim2.new(1, 0, 1, 0);
+LMG2L["ScrollingFrame_19"]["ScrollBarThickness"] = 0;
+LMG2L["ScrollingFrame_19"]["BackgroundTransparency"] = 1;
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Button
+LMG2L["Button_1a"] = Instance.new("Frame", LMG2L["ScrollingFrame_19"]);
+LMG2L["Button_1a"]["BorderSizePixel"] = 0;
+LMG2L["Button_1a"]["BackgroundColor3"] = Color3.fromRGB(27, 27, 27);
+LMG2L["Button_1a"]["Size"] = UDim2.new(0, 312, 0, 38);
+LMG2L["Button_1a"]["Name"] = [[Button]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Button.Button
+LMG2L["Button_1b"] = Instance.new("TextLabel", LMG2L["Button_1a"]);
+LMG2L["Button_1b"]["BorderSizePixel"] = 0;
+LMG2L["Button_1b"]["TextSize"] = 18;
+LMG2L["Button_1b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+LMG2L["Button_1b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Button_1b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["Button_1b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Button_1b"]["BackgroundTransparency"] = 1;
+LMG2L["Button_1b"]["Size"] = UDim2.new(0.86538, 0, 0.68421, 0);
+LMG2L["Button_1b"]["Text"] = [[Button]];
+LMG2L["Button_1b"]["Name"] = [[Button]];
+LMG2L["Button_1b"]["Position"] = UDim2.new(-0.00641, 0, 0, 0);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Button.UIPadding
+LMG2L["UIPadding_1c"] = Instance.new("UIPadding", LMG2L["Button_1a"]);
+LMG2L["UIPadding_1c"]["PaddingTop"] = UDim.new(0, 6);
+LMG2L["UIPadding_1c"]["PaddingRight"] = UDim.new(0, 6);
+LMG2L["UIPadding_1c"]["PaddingLeft"] = UDim.new(0, 10);
+LMG2L["UIPadding_1c"]["PaddingBottom"] = UDim.new(0, 6);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Button.UICorner
+LMG2L["UICorner_1d"] = Instance.new("UICorner", LMG2L["Button_1a"]);
+LMG2L["UICorner_1d"]["CornerRadius"] = UDim.new(0, 4);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Button.UIStroke
+LMG2L["UIStroke_1e"] = Instance.new("UIStroke", LMG2L["Button_1a"]);
+LMG2L["UIStroke_1e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+LMG2L["UIStroke_1e"]["Color"] = Color3.fromRGB(82, 82, 82);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Button.Button
+LMG2L["Button_1f"] = Instance.new("TextLabel", LMG2L["Button_1a"]);
+LMG2L["Button_1f"]["BorderSizePixel"] = 0;
+LMG2L["Button_1f"]["TextSize"] = 12;
+LMG2L["Button_1f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+LMG2L["Button_1f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Button_1f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Button_1f"]["BackgroundTransparency"] = 1;
+LMG2L["Button_1f"]["Size"] = UDim2.new(0.14423, 0, 0.68421, 0);
+LMG2L["Button_1f"]["Text"] = [[🖱️]];
+LMG2L["Button_1f"]["Name"] = [[Button]];
+LMG2L["Button_1f"]["Position"] = UDim2.new(0.86538, 0, 0, 0);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Warning
+LMG2L["Warning_20"] = Instance.new("Frame", LMG2L["ScrollingFrame_19"]);
+LMG2L["Warning_20"]["BorderSizePixel"] = 0;
+LMG2L["Warning_20"]["BackgroundColor3"] = Color3.fromRGB(44, 37, 4);
+LMG2L["Warning_20"]["Size"] = UDim2.new(0, 312, 0, 30);
+LMG2L["Warning_20"]["Name"] = [[Warning]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Warning.Button
+LMG2L["Button_21"] = Instance.new("TextLabel", LMG2L["Warning_20"]);
+LMG2L["Button_21"]["BorderSizePixel"] = 0;
+LMG2L["Button_21"]["TextSize"] = 12;
+LMG2L["Button_21"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Button_21"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Button_21"]["BackgroundTransparency"] = 1;
+LMG2L["Button_21"]["Size"] = UDim2.new(0.14423, 0, 0.6, 0);
+LMG2L["Button_21"]["Text"] = [[⚠️]];
+LMG2L["Button_21"]["Name"] = [[Button]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Warning.UIPadding
+LMG2L["UIPadding_22"] = Instance.new("UIPadding", LMG2L["Warning_20"]);
+LMG2L["UIPadding_22"]["PaddingTop"] = UDim.new(0, 6);
+LMG2L["UIPadding_22"]["PaddingRight"] = UDim.new(0, 6);
+LMG2L["UIPadding_22"]["PaddingLeft"] = UDim.new(0, 1);
+LMG2L["UIPadding_22"]["PaddingBottom"] = UDim.new(0, 6);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Warning.UICorner
+LMG2L["UICorner_23"] = Instance.new("UICorner", LMG2L["Warning_20"]);
+LMG2L["UICorner_23"]["CornerRadius"] = UDim.new(0, 4);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Warning.Button
+LMG2L["Button_24"] = Instance.new("TextLabel", LMG2L["Warning_20"]);
+LMG2L["Button_24"]["BorderSizePixel"] = 0;
+LMG2L["Button_24"]["TextSize"] = 18;
+LMG2L["Button_24"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+LMG2L["Button_24"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Button_24"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["Button_24"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Button_24"]["BackgroundTransparency"] = 1;
+LMG2L["Button_24"]["Size"] = UDim2.new(0.86538, 0, 0.6, 0);
+LMG2L["Button_24"]["Text"] = [[Warning]];
+LMG2L["Button_24"]["Name"] = [[Button]];
+LMG2L["Button_24"]["Position"] = UDim2.new(0.11218, 0, 0, 0);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Warning.UIStroke
+LMG2L["UIStroke_25"] = Instance.new("UIStroke", LMG2L["Warning_20"]);
+LMG2L["UIStroke_25"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+LMG2L["UIStroke_25"]["Color"] = Color3.fromRGB(166, 138, 12);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.UIPadding
+LMG2L["UIPadding_26"] = Instance.new("UIPadding", LMG2L["ScrollingFrame_19"]);
+LMG2L["UIPadding_26"]["PaddingTop"] = UDim.new(0, 1);
+LMG2L["UIPadding_26"]["PaddingRight"] = UDim.new(0, 1);
+LMG2L["UIPadding_26"]["PaddingLeft"] = UDim.new(0, 2);
+LMG2L["UIPadding_26"]["PaddingBottom"] = UDim.new(0, 1);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Label
+LMG2L["Label_27"] = Instance.new("Frame", LMG2L["ScrollingFrame_19"]);
+LMG2L["Label_27"]["BorderSizePixel"] = 0;
+LMG2L["Label_27"]["BackgroundColor3"] = Color3.fromRGB(209, 209, 209);
+LMG2L["Label_27"]["Size"] = UDim2.new(0, 312, 0, 30);
+LMG2L["Label_27"]["Name"] = [[Label]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Label.Button
+LMG2L["Button_28"] = Instance.new("TextLabel", LMG2L["Label_27"]);
+LMG2L["Button_28"]["BorderSizePixel"] = 0;
+LMG2L["Button_28"]["TextSize"] = 12;
+LMG2L["Button_28"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Button_28"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Button_28"]["BackgroundTransparency"] = 1;
+LMG2L["Button_28"]["Size"] = UDim2.new(0.14423, 0, 0.6, 0);
+LMG2L["Button_28"]["Text"] = [[💬]];
+LMG2L["Button_28"]["Name"] = [[Button]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Label.UIPadding
+LMG2L["UIPadding_29"] = Instance.new("UIPadding", LMG2L["Label_27"]);
+LMG2L["UIPadding_29"]["PaddingTop"] = UDim.new(0, 6);
+LMG2L["UIPadding_29"]["PaddingRight"] = UDim.new(0, 6);
+LMG2L["UIPadding_29"]["PaddingLeft"] = UDim.new(0, 1);
+LMG2L["UIPadding_29"]["PaddingBottom"] = UDim.new(0, 6);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Label.UICorner
+LMG2L["UICorner_2a"] = Instance.new("UICorner", LMG2L["Label_27"]);
+LMG2L["UICorner_2a"]["CornerRadius"] = UDim.new(0, 4);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Label.Button
+LMG2L["Button_2b"] = Instance.new("TextLabel", LMG2L["Label_27"]);
+LMG2L["Button_2b"]["BorderSizePixel"] = 0;
+LMG2L["Button_2b"]["TextSize"] = 18;
+LMG2L["Button_2b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+LMG2L["Button_2b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Button_2b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["Button_2b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Button_2b"]["BackgroundTransparency"] = 1;
+LMG2L["Button_2b"]["Size"] = UDim2.new(0.86538, 0, 0.6, 0);
+LMG2L["Button_2b"]["Name"] = [[Button]];
+LMG2L["Button_2b"]["Position"] = UDim2.new(0.11218, 0, 0, 0);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Label.UIStroke
+LMG2L["UIStroke_2c"] = Instance.new("UIStroke", LMG2L["Label_27"]);
+LMG2L["UIStroke_2c"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+LMG2L["UIStroke_2c"]["Color"] = Color3.fromRGB(255, 255, 255);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.UIListLayout
+LMG2L["UIListLayout_2d"] = Instance.new("UIListLayout", LMG2L["ScrollingFrame_19"]);
+LMG2L["UIListLayout_2d"]["Padding"] = UDim.new(0, 5);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Slider
+LMG2L["Slider_2e"] = Instance.new("Frame", LMG2L["ScrollingFrame_19"]);
+LMG2L["Slider_2e"]["BorderSizePixel"] = 0;
+LMG2L["Slider_2e"]["BackgroundColor3"] = Color3.fromRGB(27, 27, 27);
+LMG2L["Slider_2e"]["Size"] = UDim2.new(0, 312, 0, 50);
+LMG2L["Slider_2e"]["Name"] = [[Slider]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Slider.UIPadding
+LMG2L["UIPadding_2f"] = Instance.new("UIPadding", LMG2L["Slider_2e"]);
+LMG2L["UIPadding_2f"]["PaddingRight"] = UDim.new(0, 6);
+LMG2L["UIPadding_2f"]["PaddingLeft"] = UDim.new(0, 10);
+LMG2L["UIPadding_2f"]["PaddingBottom"] = UDim.new(0, 26);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Slider.UICorner
+LMG2L["UICorner_30"] = Instance.new("UICorner", LMG2L["Slider_2e"]);
+LMG2L["UICorner_30"]["CornerRadius"] = UDim.new(0, 4);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Slider.UIStroke
+LMG2L["UIStroke_31"] = Instance.new("UIStroke", LMG2L["Slider_2e"]);
+LMG2L["UIStroke_31"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+LMG2L["UIStroke_31"]["Color"] = Color3.fromRGB(82, 82, 82);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Slider.Title
+LMG2L["Title_32"] = Instance.new("TextLabel", LMG2L["Slider_2e"]);
+LMG2L["Title_32"]["BorderSizePixel"] = 0;
+LMG2L["Title_32"]["TextSize"] = 18;
+LMG2L["Title_32"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+LMG2L["Title_32"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Title_32"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["Title_32"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Title_32"]["BackgroundTransparency"] = 1;
+LMG2L["Title_32"]["Size"] = UDim2.new(0.86538, 0, 0.48, 0);
+LMG2L["Title_32"]["Text"] = [[Slider]];
+LMG2L["Title_32"]["Name"] = [[Title]];
+LMG2L["Title_32"]["Position"] = UDim2.new(-0.00641, 0, 0, 0);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Slider.Value
+LMG2L["Value_33"] = Instance.new("TextLabel", LMG2L["Slider_2e"]);
+LMG2L["Value_33"]["BorderSizePixel"] = 0;
+LMG2L["Value_33"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+LMG2L["Value_33"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Value_33"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Value_33"]["BackgroundTransparency"] = 1;
+LMG2L["Value_33"]["Size"] = UDim2.new(0.14423, 0, 0.48, 0);
+LMG2L["Value_33"]["Text"] = [[N/A]];
+LMG2L["Value_33"]["Name"] = [[Value]];
+LMG2L["Value_33"]["Position"] = UDim2.new(0.86538, 0, 0, 0);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Slider.Frame
+LMG2L["Frame_34"] = Instance.new("Frame", LMG2L["Slider_2e"]);
+LMG2L["Frame_34"]["BorderSizePixel"] = 0;
+LMG2L["Frame_34"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+LMG2L["Frame_34"]["Size"] = UDim2.new(0.94872, 0, 0.08, 0);
+LMG2L["Frame_34"]["Position"] = UDim2.new(0, 0, 0.7, 0);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Slider.Frame.Draggable
+LMG2L["Draggable_35"] = Instance.new("Frame", LMG2L["Frame_34"]);
+LMG2L["Draggable_35"]["BorderSizePixel"] = 0;
+LMG2L["Draggable_35"]["BackgroundColor3"] = Color3.fromRGB(57, 57, 57);
+LMG2L["Draggable_35"]["Size"] = UDim2.new(0.5, 0, 2.08333, 0);
+LMG2L["Draggable_35"]["Name"] = [[Draggable]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Slider.Frame.Draggable.UICorner
+LMG2L["UICorner_36"] = Instance.new("UICorner", LMG2L["Draggable_35"]);
+
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Slider.Frame.UICorner
+LMG2L["UICorner_37"] = Instance.new("UICorner", LMG2L["Frame_34"]);
+
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Slider.Frame.UIStroke
+LMG2L["UIStroke_38"] = Instance.new("UIStroke", LMG2L["Frame_34"]);
+LMG2L["UIStroke_38"]["Color"] = Color3.fromRGB(57, 57, 57);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Info
+LMG2L["Info_39"] = Instance.new("Frame", LMG2L["ScrollingFrame_19"]);
+LMG2L["Info_39"]["BorderSizePixel"] = 0;
+LMG2L["Info_39"]["BackgroundColor3"] = Color3.fromRGB(0, 103, 148);
+LMG2L["Info_39"]["Size"] = UDim2.new(0, 312, 0, 30);
+LMG2L["Info_39"]["Name"] = [[Info]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Info.Button
+LMG2L["Button_3a"] = Instance.new("TextLabel", LMG2L["Info_39"]);
+LMG2L["Button_3a"]["BorderSizePixel"] = 0;
+LMG2L["Button_3a"]["TextSize"] = 12;
+LMG2L["Button_3a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Button_3a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Button_3a"]["BackgroundTransparency"] = 1;
+LMG2L["Button_3a"]["Size"] = UDim2.new(0.14423, 0, 0.6, 0);
+LMG2L["Button_3a"]["Text"] = [[❗️]];
+LMG2L["Button_3a"]["Name"] = [[Button]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Info.UIPadding
+LMG2L["UIPadding_3b"] = Instance.new("UIPadding", LMG2L["Info_39"]);
+LMG2L["UIPadding_3b"]["PaddingTop"] = UDim.new(0, 6);
+LMG2L["UIPadding_3b"]["PaddingRight"] = UDim.new(0, 6);
+LMG2L["UIPadding_3b"]["PaddingLeft"] = UDim.new(0, 1);
+LMG2L["UIPadding_3b"]["PaddingBottom"] = UDim.new(0, 6);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Info.UICorner
+LMG2L["UICorner_3c"] = Instance.new("UICorner", LMG2L["Info_39"]);
+LMG2L["UICorner_3c"]["CornerRadius"] = UDim.new(0, 4);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Info.Button
+LMG2L["Button_3d"] = Instance.new("TextLabel", LMG2L["Info_39"]);
+LMG2L["Button_3d"]["BorderSizePixel"] = 0;
+LMG2L["Button_3d"]["TextSize"] = 18;
+LMG2L["Button_3d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+LMG2L["Button_3d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Button_3d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["Button_3d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Button_3d"]["BackgroundTransparency"] = 1;
+LMG2L["Button_3d"]["Size"] = UDim2.new(0.86538, 0, 0.6, 0);
+LMG2L["Button_3d"]["Text"] = [[Info]];
+LMG2L["Button_3d"]["Name"] = [[Button]];
+LMG2L["Button_3d"]["Position"] = UDim2.new(0.11218, 0, 0, 0);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Info.UIStroke
+LMG2L["UIStroke_3e"] = Instance.new("UIStroke", LMG2L["Info_39"]);
+LMG2L["UIStroke_3e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+LMG2L["UIStroke_3e"]["Color"] = Color3.fromRGB(0, 255, 255);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Dropdown
+LMG2L["Dropdown_3f"] = Instance.new("Frame", LMG2L["ScrollingFrame_19"]);
+LMG2L["Dropdown_3f"]["BorderSizePixel"] = 0;
+LMG2L["Dropdown_3f"]["BackgroundColor3"] = Color3.fromRGB(27, 27, 27);
+LMG2L["Dropdown_3f"]["Size"] = UDim2.new(0, 312, 0, 38);
+LMG2L["Dropdown_3f"]["Name"] = [[Dropdown]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Dropdown.Title
+LMG2L["Title_40"] = Instance.new("TextLabel", LMG2L["Dropdown_3f"]);
+LMG2L["Title_40"]["BorderSizePixel"] = 0;
+LMG2L["Title_40"]["TextSize"] = 18;
+LMG2L["Title_40"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+LMG2L["Title_40"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Title_40"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["Title_40"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Title_40"]["BackgroundTransparency"] = 1;
+LMG2L["Title_40"]["Size"] = UDim2.new(0.86538, 0, 0.68421, 0);
+LMG2L["Title_40"]["Text"] = [[Dropdown]];
+LMG2L["Title_40"]["Name"] = [[Title]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Dropdown.UIPadding
+LMG2L["UIPadding_41"] = Instance.new("UIPadding", LMG2L["Dropdown_3f"]);
+LMG2L["UIPadding_41"]["PaddingTop"] = UDim.new(0, 6);
+LMG2L["UIPadding_41"]["PaddingRight"] = UDim.new(0, 6);
+LMG2L["UIPadding_41"]["PaddingLeft"] = UDim.new(0, 6);
+LMG2L["UIPadding_41"]["PaddingBottom"] = UDim.new(0, 6);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Dropdown.UICorner
+LMG2L["UICorner_42"] = Instance.new("UICorner", LMG2L["Dropdown_3f"]);
+LMG2L["UICorner_42"]["CornerRadius"] = UDim.new(0, 4);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Dropdown.Button
+LMG2L["Button_43"] = Instance.new("TextLabel", LMG2L["Dropdown_3f"]);
+LMG2L["Button_43"]["BorderSizePixel"] = 0;
+LMG2L["Button_43"]["TextSize"] = 12;
+LMG2L["Button_43"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Button_43"]["TextColor3"] = Color3.fromRGB(69, 69, 69);
+LMG2L["Button_43"]["BackgroundTransparency"] = 1;
+LMG2L["Button_43"]["Size"] = UDim2.new(0.14423, 0, 0.68421, 0);
+LMG2L["Button_43"]["Text"] = [[▼]];
+LMG2L["Button_43"]["Name"] = [[Button]];
+LMG2L["Button_43"]["Position"] = UDim2.new(0.84936, 0, 0.21053, 0);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Dropdown.UIStroke
+LMG2L["UIStroke_44"] = Instance.new("UIStroke", LMG2L["Dropdown_3f"]);
+LMG2L["UIStroke_44"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+LMG2L["UIStroke_44"]["Color"] = Color3.fromRGB(82, 82, 82);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Dropdown.Button
+LMG2L["Button_45"] = Instance.new("TextLabel", LMG2L["Dropdown_3f"]);
+LMG2L["Button_45"]["BorderSizePixel"] = 0;
+LMG2L["Button_45"]["TextSize"] = 12;
+LMG2L["Button_45"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Button_45"]["TextColor3"] = Color3.fromRGB(69, 69, 69);
+LMG2L["Button_45"]["BackgroundTransparency"] = 1;
+LMG2L["Button_45"]["Size"] = UDim2.new(0.14423, 0, 0.68421, 0);
+LMG2L["Button_45"]["Text"] = [[▲]];
+LMG2L["Button_45"]["Name"] = [[Button]];
+LMG2L["Button_45"]["Position"] = UDim2.new(0.84936, 0, -0.15789, 0);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Dropdown.Optionholder
+LMG2L["Optionholder_46"] = Instance.new("Frame", LMG2L["Dropdown_3f"]);
+LMG2L["Optionholder_46"]["Visible"] = false;
+LMG2L["Optionholder_46"]["BorderSizePixel"] = 0;
+LMG2L["Optionholder_46"]["BackgroundColor3"] = Color3.fromRGB(49, 49, 49);
+LMG2L["Optionholder_46"]["Size"] = UDim2.new(0.96154, 0, 3.15789, 0);
+LMG2L["Optionholder_46"]["Position"] = UDim2.new(0, 0, 0.71053, 0);
+LMG2L["Optionholder_46"]["Name"] = [[Optionholder]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Dropdown.Optionholder.UIListLayout
+LMG2L["UIListLayout_47"] = Instance.new("UIListLayout", LMG2L["Optionholder_46"]);
+LMG2L["UIListLayout_47"]["Padding"] = UDim.new(0, 3);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Dropdown.Optionholder.Search
+LMG2L["Search_48"] = Instance.new("TextLabel", LMG2L["Optionholder_46"]);
+LMG2L["Search_48"]["BorderSizePixel"] = 0;
+LMG2L["Search_48"]["BackgroundColor3"] = Color3.fromRGB(69, 69, 69);
+LMG2L["Search_48"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Search_48"]["Size"] = UDim2.new(1, 0, 0.36538, 0);
+LMG2L["Search_48"]["Text"] = [[Search]];
+LMG2L["Search_48"]["Name"] = [[Search]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Dropdown.Optionholder.Search.UICorner
+LMG2L["UICorner_49"] = Instance.new("UICorner", LMG2L["Search_48"]);
+
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Dropdown.Optionholder.Unaction
+LMG2L["Unaction_4a"] = Instance.new("TextLabel", LMG2L["Optionholder_46"]);
+LMG2L["Unaction_4a"]["BorderSizePixel"] = 0;
+LMG2L["Unaction_4a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+LMG2L["Unaction_4a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Unaction_4a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Unaction_4a"]["BackgroundTransparency"] = 1;
+LMG2L["Unaction_4a"]["Size"] = UDim2.new(1, 0, 0.30449, 0);
+LMG2L["Unaction_4a"]["Name"] = [[Unaction]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Dropdown.Optionholder.Unaction.UIPadding
+LMG2L["UIPadding_4b"] = Instance.new("UIPadding", LMG2L["Unaction_4a"]);
+LMG2L["UIPadding_4b"]["PaddingLeft"] = UDim.new(0, 15);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Dropdown.Optionholder.Unaction.Frame
+LMG2L["Frame_4c"] = Instance.new("Frame", LMG2L["Unaction_4a"]);
+LMG2L["Frame_4c"]["BorderSizePixel"] = 0;
+LMG2L["Frame_4c"]["BackgroundColor3"] = Color3.fromRGB(214, 214, 214);
+LMG2L["Frame_4c"]["Size"] = UDim2.new(0.0104, 0, 1, 0);
+LMG2L["Frame_4c"]["Position"] = UDim2.new(-0.04507, 0, 0, 0);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Dropdown.Optionholder.Unaction.Frame.UICorner
+LMG2L["UICorner_4d"] = Instance.new("UICorner", LMG2L["Frame_4c"]);
+
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Dropdown.Optionholder.Slected
+LMG2L["Slected_4e"] = Instance.new("TextLabel", LMG2L["Optionholder_46"]);
+LMG2L["Slected_4e"]["BorderSizePixel"] = 0;
+LMG2L["Slected_4e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+LMG2L["Slected_4e"]["BackgroundColor3"] = Color3.fromRGB(103, 103, 103);
+LMG2L["Slected_4e"]["TextColor3"] = Color3.fromRGB(103, 103, 103);
+LMG2L["Slected_4e"]["BackgroundTransparency"] = 1;
+LMG2L["Slected_4e"]["Size"] = UDim2.new(1, 0, 0.30449, 0);
+LMG2L["Slected_4e"]["Name"] = [[Slected]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Dropdown.Optionholder.Slected.UIPadding
+LMG2L["UIPadding_4f"] = Instance.new("UIPadding", LMG2L["Slected_4e"]);
+LMG2L["UIPadding_4f"]["PaddingLeft"] = UDim.new(0, 15);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Dropdown.Optionholder.Slected.Frame
+LMG2L["Frame_50"] = Instance.new("Frame", LMG2L["Slected_4e"]);
+LMG2L["Frame_50"]["BorderSizePixel"] = 0;
+LMG2L["Frame_50"]["BackgroundColor3"] = Color3.fromRGB(102, 102, 102);
+LMG2L["Frame_50"]["Size"] = UDim2.new(0.0104, 0, 1, 0);
+LMG2L["Frame_50"]["Position"] = UDim2.new(-0.04507, 0, 0, 0);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Dropdown.Optionholder.Slected.Frame.UICorner
+LMG2L["UICorner_51"] = Instance.new("UICorner", LMG2L["Frame_50"]);
+
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Dropdown.Optionholder.SlectAtion
+LMG2L["SlectAtion_52"] = Instance.new("TextLabel", LMG2L["Optionholder_46"]);
+LMG2L["SlectAtion_52"]["BorderSizePixel"] = 0;
+LMG2L["SlectAtion_52"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+LMG2L["SlectAtion_52"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+LMG2L["SlectAtion_52"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
+LMG2L["SlectAtion_52"]["BackgroundTransparency"] = 1;
+LMG2L["SlectAtion_52"]["Size"] = UDim2.new(1, 0, 0.30449, 0);
+LMG2L["SlectAtion_52"]["Name"] = [[SlectAtion]];
+LMG2L["SlectAtion_52"]["Position"] = UDim2.new(0.27733, 0, -0.58462, 0);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Dropdown.Optionholder.SlectAtion.UIPadding
+LMG2L["UIPadding_53"] = Instance.new("UIPadding", LMG2L["SlectAtion_52"]);
+LMG2L["UIPadding_53"]["PaddingLeft"] = UDim.new(0, 15);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Dropdown.Optionholder.SlectAtion.Frame
+LMG2L["Frame_54"] = Instance.new("Frame", LMG2L["SlectAtion_52"]);
+LMG2L["Frame_54"]["BorderSizePixel"] = 0;
+LMG2L["Frame_54"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+LMG2L["Frame_54"]["Size"] = UDim2.new(0.0104, 0, 1, 0);
+LMG2L["Frame_54"]["Position"] = UDim2.new(-0.04507, 0, 0, 0);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Dropdown.Optionholder.SlectAtion.Frame.UICorner
+LMG2L["UICorner_55"] = Instance.new("UICorner", LMG2L["Frame_54"]);
+
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Dropdown.Optionholder.UICorner
+LMG2L["UICorner_56"] = Instance.new("UICorner", LMG2L["Optionholder_46"]);
+
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Toggle
+LMG2L["Toggle_57"] = Instance.new("Frame", LMG2L["ScrollingFrame_19"]);
+LMG2L["Toggle_57"]["BorderSizePixel"] = 0;
+LMG2L["Toggle_57"]["BackgroundColor3"] = Color3.fromRGB(27, 27, 27);
+LMG2L["Toggle_57"]["Size"] = UDim2.new(0, 312, 0, 38);
+LMG2L["Toggle_57"]["Name"] = [[Toggle]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Toggle.Toggle
+LMG2L["Toggle_58"] = Instance.new("TextLabel", LMG2L["Toggle_57"]);
+LMG2L["Toggle_58"]["BorderSizePixel"] = 0;
+LMG2L["Toggle_58"]["TextSize"] = 18;
+LMG2L["Toggle_58"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+LMG2L["Toggle_58"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Toggle_58"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["Toggle_58"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Toggle_58"]["BackgroundTransparency"] = 1;
+LMG2L["Toggle_58"]["Size"] = UDim2.new(0.86538, 0, 0.68421, 0);
+LMG2L["Toggle_58"]["Text"] = [[Toggle]];
+LMG2L["Toggle_58"]["Name"] = [[Toggle]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Toggle.UIPadding
+LMG2L["UIPadding_59"] = Instance.new("UIPadding", LMG2L["Toggle_57"]);
+LMG2L["UIPadding_59"]["PaddingTop"] = UDim.new(0, 6);
+LMG2L["UIPadding_59"]["PaddingRight"] = UDim.new(0, 6);
+LMG2L["UIPadding_59"]["PaddingLeft"] = UDim.new(0, 10);
+LMG2L["UIPadding_59"]["PaddingBottom"] = UDim.new(0, 6);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Toggle.UICorner
+LMG2L["UICorner_5a"] = Instance.new("UICorner", LMG2L["Toggle_57"]);
+LMG2L["UICorner_5a"]["CornerRadius"] = UDim.new(0, 4);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Toggle.UIStroke
+LMG2L["UIStroke_5b"] = Instance.new("UIStroke", LMG2L["Toggle_57"]);
+LMG2L["UIStroke_5b"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+LMG2L["UIStroke_5b"]["Color"] = Color3.fromRGB(82, 82, 82);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Toggle.CheckmarkHolder
+LMG2L["CheckmarkHolder_5c"] = Instance.new("Frame", LMG2L["Toggle_57"]);
+LMG2L["CheckmarkHolder_5c"]["BorderSizePixel"] = 0;
+LMG2L["CheckmarkHolder_5c"]["BackgroundColor3"] = Color3.fromRGB(81, 81, 81);
+LMG2L["CheckmarkHolder_5c"]["Size"] = UDim2.new(0.08974, 0, 0.73684, 0);
+LMG2L["CheckmarkHolder_5c"]["Position"] = UDim2.new(0.85897, 0, -0.02632, 0);
+LMG2L["CheckmarkHolder_5c"]["Name"] = [[CheckmarkHolder]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Toggle.CheckmarkHolder.UICorner
+LMG2L["UICorner_5d"] = Instance.new("UICorner", LMG2L["CheckmarkHolder_5c"]);
+LMG2L["UICorner_5d"]["CornerRadius"] = UDim.new(0, 2);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.Toggle.CheckmarkHolder.UIStroke
+LMG2L["UIStroke_5e"] = Instance.new("UIStroke", LMG2L["CheckmarkHolder_5c"]);
+LMG2L["UIStroke_5e"]["Color"] = Color3.fromRGB(111, 111, 111);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.ToggleAction
+LMG2L["ToggleAction_5f"] = Instance.new("Frame", LMG2L["ScrollingFrame_19"]);
+LMG2L["ToggleAction_5f"]["BorderSizePixel"] = 0;
+LMG2L["ToggleAction_5f"]["BackgroundColor3"] = Color3.fromRGB(27, 27, 27);
+LMG2L["ToggleAction_5f"]["Size"] = UDim2.new(0, 314, 0, 40);
+LMG2L["ToggleAction_5f"]["Name"] = [[ToggleAction]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.ToggleAction.Toggle
+LMG2L["Toggle_60"] = Instance.new("TextLabel", LMG2L["ToggleAction_5f"]);
+LMG2L["Toggle_60"]["BorderSizePixel"] = 0;
+LMG2L["Toggle_60"]["TextSize"] = 18;
+LMG2L["Toggle_60"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+LMG2L["Toggle_60"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Toggle_60"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["Toggle_60"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["Toggle_60"]["BackgroundTransparency"] = 1;
+LMG2L["Toggle_60"]["Size"] = UDim2.new(0.85987, 0, 0.7, 0);
+LMG2L["Toggle_60"]["Text"] = [[Toggle]];
+LMG2L["Toggle_60"]["Name"] = [[Toggle]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.ToggleAction.UIPadding
+LMG2L["UIPadding_61"] = Instance.new("UIPadding", LMG2L["ToggleAction_5f"]);
+LMG2L["UIPadding_61"]["PaddingTop"] = UDim.new(0, 6);
+LMG2L["UIPadding_61"]["PaddingRight"] = UDim.new(0, 6);
+LMG2L["UIPadding_61"]["PaddingLeft"] = UDim.new(0, 10);
+LMG2L["UIPadding_61"]["PaddingBottom"] = UDim.new(0, 6);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.ToggleAction.UICorner
+LMG2L["UICorner_62"] = Instance.new("UICorner", LMG2L["ToggleAction_5f"]);
+LMG2L["UICorner_62"]["CornerRadius"] = UDim.new(0, 4);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.ToggleAction.UIStroke
+LMG2L["UIStroke_63"] = Instance.new("UIStroke", LMG2L["ToggleAction_5f"]);
+LMG2L["UIStroke_63"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+LMG2L["UIStroke_63"]["Color"] = Color3.fromRGB(82, 82, 82);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.ToggleAction.CheckmarkHolder
+LMG2L["CheckmarkHolder_64"] = Instance.new("Frame", LMG2L["ToggleAction_5f"]);
+LMG2L["CheckmarkHolder_64"]["BorderSizePixel"] = 0;
+LMG2L["CheckmarkHolder_64"]["BackgroundColor3"] = Color3.fromRGB(71, 250, 65);
+LMG2L["CheckmarkHolder_64"]["Size"] = UDim2.new(0.08917, 0, 0.7, 0);
+LMG2L["CheckmarkHolder_64"]["Position"] = UDim2.new(0.8535, 0, -0.025, 0);
+LMG2L["CheckmarkHolder_64"]["Name"] = [[CheckmarkHolder]];
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.ToggleAction.CheckmarkHolder.UICorner
+LMG2L["UICorner_65"] = Instance.new("UICorner", LMG2L["CheckmarkHolder_64"]);
+LMG2L["UICorner_65"]["CornerRadius"] = UDim.new(0, 2);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.Content.ScrollingFrame.ToggleAction.CheckmarkHolder.UIStroke
+LMG2L["UIStroke_66"] = Instance.new("UIStroke", LMG2L["CheckmarkHolder_64"]);
+LMG2L["UIStroke_66"]["Color"] = Color3.fromRGB(251, 251, 242);
+
+
+-- Players.Bawcs177.PlayerGui.ScreenGui.Main.UIAspectRatioConstraint
+LMG2L["UIAspectRatioConstraint_67"] = Instance.new("UIAspectRatioConstraint", LMG2L["Main_2"]);
+LMG2L["UIAspectRatioConstraint_67"]["AspectRatio"] = 1.42484;
+
+
+
+return LMG2L["ScreenGui_1"], require;
