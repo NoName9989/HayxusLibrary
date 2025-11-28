@@ -1,0 +1,339 @@
+-- HayxusLibrary.lua
+-- ModuleScript: trả về table library
+
+local TweenService = game:GetService("TweenService")
+local UserInputService = game:GetService("UserInputService")
+local Players = game:GetService("Players")
+
+local Hayxus = {}
+Hayxus.__index = Hayxus
+
+-- Helper: create instance and set properties
+local function new(instClass, props)
+	local inst = Instance.new(instClass)
+	if props then
+		for k,v in pairs(props) do
+			pcall(function() inst[k] = v end)
+		end
+	end
+	return inst
+end
+
+-- Default style values (dễ chỉnh)
+local STYLE = {
+	bgMain = Color3.fromRGB(62,62,62),
+	bgNav = Color3.fromRGB(105,105,105),
+	bgContent = Color3.fromRGB(27,27,27),
+	textColor = Color3.fromRGB(255,255,255),
+	accent = Color3.fromRGB(82,82,82),
+	radius = UDim.new(0,6)
+}
+
+-- Create base UI (returns object with API to add controls)
+function Hayxus:Create(parent)
+	parent = parent or Players.LocalPlayer:WaitForChild("PlayerGui")
+	-- Root ScreenGui
+	local screen = new("ScreenGui", { Name = "HayxusHub", ZIndexBehavior = Enum.ZIndexBehavior.Sibling })
+	screen.Parent = parent
+
+	-- Main frame
+	local main = new("Frame", {
+		Name = "Main",
+		BackgroundColor3 = STYLE.bgMain,
+		BorderSizePixel = 0,
+		Size = UDim2.new(0.6,0,0.9,0),
+		Position = UDim2.new(0.2,0,0.05,0)
+	})
+	main.Parent = screen
+	local mainCorner = new("UICorner", { CornerRadius = STYLE.radius, Parent = main })
+
+	-- Top bar
+	local topbar = new("Frame", { Name = "TopBar", BackgroundColor3 = Color3.fromRGB(86,86,86), Size = UDim2.new(1,0,0.12,0), Parent = main })
+	new("UICorner",{CornerRadius = UDim.new(0,4), Parent = topbar})
+	local title = new("TextLabel", {
+		Name = "Title",
+		Text = "Hayxus Hub",
+		BackgroundTransparency = 1,
+		TextColor3 = STYLE.textColor,
+		Font = Enum.Font.SourceSansBold,
+		TextSize = 22,
+		Position = UDim2.new(0.02,0,0,0),
+		Size = UDim2.new(0.4,0,1,0),
+		Parent = topbar
+	})
+
+	-- Content area (scrolling)
+	local contentFrame = new("Frame", { Name = "Content", BackgroundTransparency = 1, Size = UDim2.new(1,0,0.88,0), Position = UDim2.new(0,0,0.12,0), Parent = main })
+	local scrolling = new("ScrollingFrame", { Name = "Scrolling", Parent = contentFrame, BackgroundTransparency = 1, Size = UDim2.new(1,0,1,0), ScrollBarThickness = 0 })
+	new("UIListLayout", { Parent = scrolling, Padding = UDim.new(0,6) })
+	new("UIPadding", { Parent = scrolling, PaddingLeft = UDim.new(0,8), PaddingTop = UDim.new(0,8) })
+
+	-- object that we return with APIs
+	local obj = setmetatable({
+		ScreenGui = screen,
+		Main = main,
+		TopBar = topbar,
+		Title = title,
+		Scrolling = scrolling,
+		_open = true
+	}, Hayxus)
+
+	-- Close button (simple)
+	local closeBtn = new("TextButton", {
+		Name = "Close",
+		Text = "X",
+		BackgroundTransparency = 1,
+		TextSize = 18,
+		TextColor3 = STYLE.textColor,
+		Size = UDim2.new(0.06,0,0.7,0),
+		Position = UDim2.new(0.92,0,0.15,0),
+		Parent = topbar
+	})
+	closeBtn.MouseButton1Click:Connect(function()
+		obj.ScreenGui.Enabled = not obj.ScreenGui.Enabled
+	end)
+
+	-- Make window draggable (by topbar)
+	local dragging, dragInput, dragStart, startPos
+	local function update(input)
+		local delta = input.Position - dragStart
+		main.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	topbar.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = true
+			dragStart = input.Position
+			startPos = main.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then dragging = false end
+			end)
+		end
+	end)
+	topbar.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement then
+			dragInput = input
+		end
+	end)
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+
+	return obj
+end
+
+-- INTERNAL: create a base "row" frame for controls
+function Hayxus:_makeRow(titleText)
+	local row = new("Frame", {
+		Size = UDim2.new(1, -16, 0, 38),
+		BackgroundColor3 = STYLE.bgContent,
+		BorderSizePixel = 0,
+		Parent = self.Scrolling,
+		Name = "Row"
+	})
+	new("UICorner",{CornerRadius = UDim.new(0,4), Parent = row})
+	new("UIStroke",{ApplyStrokeMode = Enum.ApplyStrokeMode.Border, Color = STYLE.accent, Parent = row})
+
+	local left = new("TextLabel", {
+		Name = "Label",
+		Text = titleText or "",
+		BackgroundTransparency = 1,
+		TextXAlignment = Enum.TextXAlignment.Left,
+		TextColor3 = STYLE.textColor,
+		Font = Enum.Font.SourceSans,
+		TextSize = 16,
+		Size = UDim2.new(0.78,0,1,0),
+		Position = UDim2.new(0.02,0,0,0),
+		Parent = row
+	})
+
+	return row, left
+end
+
+-- Add a plain button
+function Hayxus:AddButton(text, callback)
+	local row, left = self:_makeRow(text)
+	local btn = new("TextButton", {
+		Name = "Call",
+		Text = "Button",
+		BackgroundTransparency = 1,
+		TextSize = 14,
+		TextColor3 = STYLE.textColor,
+		Size = UDim2.new(0.18,0,0.9,0),
+		Position = UDim2.new(0.8,0,0.05,0),
+		Parent = row
+	})
+	btn.MouseButton1Click:Connect(function()
+		pcall(callback)
+	end)
+	return btn
+end
+
+-- Add a label (info)
+function Hayxus:AddLabel(text)
+	local row, left = self:_makeRow("")
+	left.Text = text or ""
+	return left
+end
+
+-- Add toggle (returns a table with :Set(boolean))
+function Hayxus:AddToggle(text, default, callback)
+	local row, left = self:_makeRow(text)
+	local holder = new("Frame", {
+		Size = UDim2.new(0.18,0,0.9,0),
+		Position = UDim2.new(0.8,0,0.05,0),
+		Parent = row,
+		BackgroundTransparency = 1
+	})
+	local box = new("Frame", { Size = UDim2.new(1,0,1,0), BackgroundColor3 = Color3.fromRGB(81,81,81), BorderSizePixel = 0, Parent = holder })
+	new("UICorner",{CornerRadius = UDim.new(0,3), Parent = box})
+	local inner = new("Frame", { Size = UDim2.new(0.5,0,1,0), Position = UDim2.new(default and 0.5 or 0,0,0,0), BackgroundColor3 = default and Color3.fromRGB(71,250,65) or Color3.fromRGB(111,111,111), Parent = box })
+	new("UICorner",{CornerRadius = UDim.new(0,3), Parent = inner})
+
+	local state = default and true or false
+	local function setState(s, trigger)
+		state = s
+		if s then
+			inner:TweenPosition(UDim2.new(0.5,0,0,0),"Out","Quad",0.12,true)
+			inner.BackgroundColor3 = Color3.fromRGB(71,250,65)
+		else
+			inner:TweenPosition(UDim2.new(0,0,0,0),"Out","Quad",0.12,true)
+			inner.BackgroundColor3 = Color3.fromRGB(111,111,111)
+		end
+		if trigger and callback then pcall(callback, state) end
+	end
+
+	box.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			setState(not state, true)
+		end
+	end)
+
+	return {
+		Get = function() return state end,
+		Set = function(v) setState(tonumber(v) == 1 or v == true, false) end
+	}
+end
+
+-- Add a slider
+function Hayxus:AddSlider(text, min, max, default, callback)
+	min = min or 0; max = max or 100; default = default or min
+	local row, left = self:_makeRow(text)
+	local bar = new("Frame", { Size = UDim2.new(0.7,0,0.28,0), Position = UDim2.new(0.28,0,0.35,0), BackgroundColor3 = Color3.fromRGB(0,0,0), Parent = row })
+	new("UICorner",{CornerRadius = UDim.new(0,4), Parent = bar})
+	local fill = new("Frame", { Size = UDim2.new((default - min)/(max - min),0,1,0), BackgroundColor3 = Color3.fromRGB(57,57,57), Parent = bar })
+	new("UICorner",{CornerRadius = UDim.new(0,4), Parent = fill})
+	local knob = new("Frame", { Size = UDim2.new(0,0,1,0), BackgroundColor3 = Color3.fromRGB(200,200,200), Parent = bar })
+	knob.Size = UDim2.new(0,12,1,0)
+	knob.Position = UDim2.new(fill.Size.X.Scale,0,0,0)
+	new("UICorner",{CornerRadius = UDim.new(0,6), Parent = knob})
+
+	local dragging = false
+	local function updateSlider(inputPos)
+		local absX = inputPos.X - bar.AbsolutePosition.X
+		local frac = math.clamp(absX / bar.AbsoluteSize.X, 0, 1)
+		fill.Size = UDim2.new(frac,0,1,0)
+		knob.Position = UDim2.new(frac, -6, 0, 0)
+		local value = min + (max-min) * frac
+		if callback then pcall(callback, value) end
+		return value
+	end
+
+	bar.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = true
+			updateSlider(input.Position)
+		end
+	end)
+	UserInputService.InputEnded:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = false
+		end
+	end)
+	UserInputService.InputChanged:Connect(function(input)
+		if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+			updateSlider(input.Position)
+		end
+	end)
+
+	-- init
+	local frac = (default - min) / (max - min)
+	fill.Size = UDim2.new(frac,0,1,0)
+	knob.Position = UDim2.new(frac, -6, 0, 0)
+
+	return {
+		Set = function(v)
+			local frac = math.clamp((v-min)/(max-min), 0, 1)
+			fill.Size = UDim2.new(frac,0,1,0)
+			knob.Position = UDim2.new(frac, -6, 0, 0)
+		end
+	}
+end
+
+-- Add Dropdown
+function Hayxus:AddDropdown(text, options, callback)
+	local row, left = self:_makeRow(text)
+	local btn = new("TextLabel", { Text = "▼", BackgroundTransparency = 1, TextColor3 = STYLE.textColor, Size = UDim2.new(0.06,0,1,0), Position = UDim2.new(0.94,0,0,0), Parent = row })
+	local holder = new("Frame", { Size = UDim2.new(1,0,0,0), Position = UDim2.new(0,0,0,1), BackgroundColor3 = Color3.fromRGB(49,49,49), Visible = false, Parent = row })
+	new("UICorner",{CornerRadius = UDim.new(0,4), Parent = holder})
+	local list = new("UIListLayout", { Parent = holder, Padding = UDim.new(0,3) })
+
+	local function makeOption(opt)
+		local optLabel = new("TextButton", {
+			Size = UDim2.new(1,0,0,28),
+			BackgroundTransparency = 1,
+			Text = opt,
+			TextColor3 = STYLE.textColor,
+			Parent = holder
+		})
+		optLabel.MouseButton1Click:Connect(function()
+			left.Text = tostring(opt)
+			holder.Visible = false
+			if callback then pcall(callback, opt) end
+		end)
+	end
+
+	for _,v in ipairs(options or {}) do
+		makeOption(v)
+	end
+
+	row.MouseEnter:Connect(function()
+		-- optional hover style
+	end)
+
+	btn.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			holder.Visible = not holder.Visible
+			if holder.Visible then
+				-- adjust holder size by number of children
+				local count = #holder:GetChildren()
+				-- safe calc: count options (TextButtons)
+				local opts = 0
+				for _,c in ipairs(holder:GetChildren()) do
+					if c:IsA("TextButton") then opts = opts + 1 end
+				end
+				holder.Size = UDim2.new(1,0,0, math.clamp(opts * 28 + 6, 0, 200))
+			end
+		end
+	end)
+
+	return {
+		SetOptions = function(t)
+			-- clear existing
+			for _,c in ipairs(holder:GetChildren()) do
+				if c:IsA("TextButton") then c:Destroy() end
+			end
+			for _,v in ipairs(t) do makeOption(v) end
+		end
+	}
+end
+
+-- Convenience: create new UI root quickly
+function Hayxus.New(parent)
+	local lib = {}
+	setmetatable(lib, Hayxus)
+	return lib:Create(parent)
+end
+
+return Hayxus
